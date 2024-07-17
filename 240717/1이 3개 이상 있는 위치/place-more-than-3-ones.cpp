@@ -19,7 +19,7 @@ int main() {
             for(int i=0;i<4;i++){
                 y1=dy[i]+y;
                 x1=dx[i]+x;
-                if(y1>=n||x1>=n)continue;
+                if((y1>=n||x1>=n)||(y1<0&&x1<0))continue;
                 if(arr[dy[i]+y][dx[i]+x]==0)flag = true;
             }
             if(!flag)
