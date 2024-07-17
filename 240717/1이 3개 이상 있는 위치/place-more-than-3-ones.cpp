@@ -16,13 +16,14 @@ int main() {
         for(int x=0;x<n;x++){
             flag = false;
             int y1,x1;
+            int count = 0;
             for(int i=0;i<4;i++){
                 y1=dy[i]+y;
                 x1=dx[i]+x;
                 if((y1>n||x1>n)||(y1<0||x1<0))continue;
-                if(arr[dy[i]+y][dx[i]+x]==0)flag = true;
+                if(arr[dy[i]+y][dx[i]+x] == 1)count++;
             }
-            if(!flag)
+            if(count>=3)
                 cnt++;
         }
     }
